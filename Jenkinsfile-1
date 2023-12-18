@@ -1,7 +1,9 @@
 pipeline {
     
     agent {
-        label 'agent-1'
+        docker { 
+           image 'sonarqube:lts'
+           image 'maven:lts'
     }
     
     tools {
